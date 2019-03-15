@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Lab - Quiz
 //
 //  Created by Arkadiy Grigoryanc on 14/03/2019.
@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-
+    
+    // MARK: - Actions
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
 }
 
