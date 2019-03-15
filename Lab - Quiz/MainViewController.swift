@@ -9,9 +9,19 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    @IBOutlet var emojiLabels: [UILabel]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let stars = SuperStar.allCases
+        stars.enumerated().forEach { (offset, element) in
+            
+            emojiLabels[offset].text = element.rawValue
+            
+        }
         
     }
     
