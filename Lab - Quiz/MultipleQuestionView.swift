@@ -20,10 +20,15 @@ class MultipleQuestionView: QuestionView {
     @IBOutlet weak var answerThreeSwitch: UISwitch!
     @IBOutlet weak var answerFourSwitch: UISwitch!
     
-    var answerLabels: [UILabel?] {
+    private var answerLabels: [UILabel?] {
         return [answerOneLabel, answerTwoLabel, answerThreeLabel, answerFourLabel]
     }
     
-    
-    
+    override func setQuestion(_ question: Question) {
+        super.setQuestion(question)
+        
+        question.answers.enumerated().forEach { answerLabels[$0]?.text = $1.text }
+        
+    }
+        
 }

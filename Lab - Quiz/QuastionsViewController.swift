@@ -10,26 +10,49 @@ import UIKit
 
 class QuastionsViewController: UIViewController {
     
+    // MARK: - Outlets
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var singleQuestionView: SingleQuestionView!
     @IBOutlet weak var multipleQuestionView: MultipleQuestionView!
     @IBOutlet weak var rangedQuestionView: RangedQuestionView!
     
+    // MARK: - Private properties
     private var questions: [Question] = []
-    
+    private var currentQuestionNumber = 14           // 3 - multiple, 14 - ranged, ather - single
     private var responceType = Question.ResponceType.single {
-        didSet { showQuestionView(with: responceType) }
+        didSet { displayQuestionView(by: responceType) }
     }
     
+    // MARK: - Life cicles
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Load question
         loadQuesions {
-            // Set firstquestion
-            set(question: questions[0])
+            updateUI()
         }
         
         //performSegue(withIdentifier: "Finish", sender: nil)
+    }
+    
+    // MARK: - Private methods
+    private func updateUI() {
+        
+        let question = questions[currentQuestionNumber]
+        
+        // set responseType
+        responceType = question.type
+        
+        // Set question
+        setQuestion(question)
+        
+        // Set title
+        title = "Question \(String(currentQuestionNumber + 1))/\(String(questions.count))"
+        
+        // update value progressView
+        let progress = 1.0 / Float(questions.count + 1) * Float(currentQuestionNumber + 1)
+        progressView.setProgress(progress, animated: true)
+        
     }
     
     private func loadQuesions(completed: () -> ()) {
@@ -39,23 +62,21 @@ class QuastionsViewController: UIViewController {
         }
     }
     
-    private func set(question: Question) {
-        
-        responceType = question.type
+    private func setQuestion(_ question: Question) {
         
         switch responceType {
         
         case .single: singleQuestionView.setQuestion(question)
             
-        case .multiple: question.answers.enumerated().forEach { multipleQuestionView.answerLabels[$0]?.text = $1.text }
+        case .multiple: multipleQuestionView.setQuestion(question)
         
-        default: break
+        case .ranged: rangedQuestionView.setQuestion(question)
             
         }
         
     }
     
-    private func showQuestionView(with responseType: Question.ResponceType) {
+    private func displayQuestionView(by responseType: Question.ResponceType) {
         
         switch responseType {
         case .single:
@@ -74,14 +95,4 @@ class QuastionsViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

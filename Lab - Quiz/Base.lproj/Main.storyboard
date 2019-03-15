@@ -136,14 +136,20 @@
                                     <outlet property="answerOneButton" destination="Ivf-9w-pjG" id="FRX-oD-erD"/>
                                     <outlet property="answerThreeButton" destination="VmC-9l-bFz" id="jap-E8-iXX"/>
                                     <outlet property="answerTwoButton" destination="b5x-fc-pmI" id="fWz-nr-fNS"/>
-                                    <outlet property="questionLabel" destination="jjm-4D-5j8" id="ZNJ-I5-P2l"/>
+                                    <outlet property="questionLabel" destination="jjm-4D-5j8" id="3y3-IN-2Uk"/>
                                 </connections>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rTU-VB-Ebo" userLabel="Multiple Stack View" customClass="MultipleQuestionView" customModule="Lab___Quiz" customModuleProvider="target">
-                                <rect key="frame" x="93" y="175" width="134" height="218"/>
+                                <rect key="frame" x="93" y="157" width="134" height="254.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buX-3V-tfo">
+                                        <rect key="frame" x="32.5" y="0.0" width="69" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="EPD-9H-lMb">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="31"/>
+                                        <rect key="frame" x="0.0" y="36.5" width="134" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAp-Ge-cwz">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="31"/>
@@ -151,13 +157,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u32-4R-iZr">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u32-4R-iZr">
                                                 <rect key="frame" x="85" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-4n-QKs">
-                                        <rect key="frame" x="0.0" y="47" width="134" height="31"/>
+                                        <rect key="frame" x="0.0" y="83.5" width="134" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYJ-of-1OQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="31"/>
@@ -165,13 +171,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vIv-2X-sPd">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vIv-2X-sPd">
                                                 <rect key="frame" x="85" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-US-4UR">
-                                        <rect key="frame" x="0.0" y="94" width="134" height="31"/>
+                                        <rect key="frame" x="0.0" y="130.5" width="134" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp1-jb-kUe">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="31"/>
@@ -179,13 +185,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-F0-FMk">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-F0-FMk">
                                                 <rect key="frame" x="85" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="XE6-D3-Rrm">
-                                        <rect key="frame" x="0.0" y="141" width="134" height="31"/>
+                                        <rect key="frame" x="0.0" y="177.5" width="134" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-k3-G3R">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="31"/>
@@ -193,18 +199,20 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-sv-LKa">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-sv-LKa">
                                                 <rect key="frame" x="85" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXE-sg-fB2">
-                                        <rect key="frame" x="48.5" y="188" width="37" height="30"/>
-                                        <color key="backgroundColor" red="1" green="0.50409315880000005" blue="0.076929256510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="frame" x="47.5" y="224.5" width="39" height="30"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="xR6-oq-jKO"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="xR6-oq-jKO"/>
                                         </constraints>
-                                        <state key="normal" title="Done"/>
+                                        <state key="normal" title="Reply">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -221,39 +229,66 @@
                                     <outlet property="answerFourLabel" destination="cDD-k3-G3R" id="4Wq-Ir-iN7"/>
                                     <outlet property="answerFourSwitch" destination="qaV-sv-LKa" id="cHZ-HV-2E8"/>
                                     <outlet property="answerOneLabel" destination="LAp-Ge-cwz" id="db4-k1-iak"/>
-                                    <outlet property="answerOneSwitch" destination="u32-4R-iZr" id="F7f-q7-83P"/>
+                                    <outlet property="answerOneSwitch" destination="u32-4R-iZr" id="dhS-tI-T5Y"/>
                                     <outlet property="answerThreeLabel" destination="Fp1-jb-kUe" id="YaV-1X-jW4"/>
                                     <outlet property="answerThreeSwitch" destination="KZI-F0-FMk" id="BEb-fM-VTd"/>
                                     <outlet property="answerThwSwitch" destination="vIv-2X-sPd" id="b0A-7J-qIP"/>
                                     <outlet property="answerTwoLabel" destination="DYJ-of-1OQ" id="iQv-5h-MMk"/>
+                                    <outlet property="questionLabel" destination="buX-3V-tfo" id="2og-mX-VG3"/>
                                     <outlet property="replyButton" destination="hXE-sg-fB2" id="Gvx-Tx-BTE"/>
                                 </connections>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bAu-MC-Sj3" userLabel="Range Stack View" customClass="RangedQuestionView" customModule="Lab___Quiz" customModuleProvider="target">
-                                <rect key="frame" x="16" y="246" width="288" height="76"/>
+                                <rect key="frame" x="27" y="209.5" width="266" height="149"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bSr-00-uws">
-                                        <rect key="frame" x="-2" y="0.0" width="292" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knL-he-5b3">
+                                        <rect key="frame" x="98.5" y="0.0" width="69" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="bSr-00-uws">
+                                        <rect key="frame" x="-2" y="36.5" width="270" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="GPc-ID-he1"/>
                                         </constraints>
                                     </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="216" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-P8-YYH">
+                                        <rect key="frame" x="14.5" y="82.5" width="237.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltx-bV-Mft">
+                                                <rect key="frame" x="0.0" y="0.0" width="10.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM8-Zw-dF6">
+                                                <rect key="frame" x="226.5" y="0.0" width="11" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq8-Ob-XJR">
-                                        <rect key="frame" x="94" y="46" width="100" height="30"/>
-                                        <color key="backgroundColor" red="1" green="0.50409315880000005" blue="0.076929256510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="frame" x="83" y="119" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="36a-1x-G8y"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="36a-1x-G8y"/>
                                         </constraints>
-                                        <state key="normal" title="Done"/>
+                                        <state key="normal" title="Reply">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <connections>
                                     <outlet property="answerSlider" destination="bSr-00-uws" id="Zeb-fu-kp6"/>
+                                    <outlet property="questionLabel" destination="knL-he-5b3" id="TMh-0r-3Q0"/>
                                     <outlet property="replyButton" destination="Dq8-Ob-XJR" id="ey4-Yh-seg"/>
                                 </connections>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.81933295230000003" blue="0.48111100210000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lPp-x5-Sc9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rTU-VB-Ebo" secondAttribute="trailing" constant="16" id="CCg-PI-Ipa"/>
                             <constraint firstItem="rTU-VB-Ebo" firstAttribute="centerX" secondItem="ff5-Ds-5SG" secondAttribute="centerX" id="EKC-Hp-kZT"/>
@@ -266,6 +301,8 @@
                             <constraint firstItem="rTU-VB-Ebo" firstAttribute="centerY" secondItem="ff5-Ds-5SG" secondAttribute="centerY" id="bqa-HZ-a1I"/>
                             <constraint firstItem="lPp-x5-Sc9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bAu-MC-Sj3" secondAttribute="trailing" constant="16" id="btx-Tu-9H8"/>
                             <constraint firstItem="29A-AJ-Ceh" firstAttribute="leading" secondItem="ff5-Ds-5SG" secondAttribute="leading" id="d2M-3E-3Pt"/>
+                            <constraint firstItem="bAu-MC-Sj3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lPp-x5-Sc9" secondAttribute="leading" constant="16" id="d59-mr-9nE"/>
+                            <constraint firstItem="lPp-x5-Sc9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bAu-MC-Sj3" secondAttribute="trailing" constant="16" id="kTt-zM-ry5"/>
                             <constraint firstItem="kWl-da-bMk" firstAttribute="centerX" secondItem="ff5-Ds-5SG" secondAttribute="centerX" id="nn4-5J-o8o"/>
                             <constraint firstItem="lPp-x5-Sc9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kWl-da-bMk" secondAttribute="trailing" constant="16" id="tHN-Xb-J9e"/>
                             <constraint firstItem="bAu-MC-Sj3" firstAttribute="centerY" secondItem="ff5-Ds-5SG" secondAttribute="centerY" id="vY0-v4-4TH"/>
@@ -274,14 +311,19 @@
                         <viewLayoutGuide key="safeArea" id="lPp-x5-Sc9"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="kWl-da-bMk"/>
                                 <exclude reference="rTU-VB-Ebo"/>
-                                <exclude reference="bAu-MC-Sj3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="btx-Tu-9H8"/>
+                                <exclude reference="aWx-kz-79p"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Quation 1" id="gvA-OH-Ejf"/>
                     <connections>
                         <outlet property="multipleQuestionView" destination="rTU-VB-Ebo" id="vsG-MD-V9f"/>
+                        <outlet property="progressView" destination="29A-AJ-Ceh" id="Yv5-w4-fFZ"/>
                         <outlet property="rangedQuestionView" destination="bAu-MC-Sj3" id="ZxH-T0-M2f"/>
                         <outlet property="singleQuestionView" destination="kWl-da-bMk" id="GU6-Er-rHX"/>
                         <segue destination="k2z-vZ-a7x" kind="show" identifier="Finish" id="V1t-bb-vRy"/>

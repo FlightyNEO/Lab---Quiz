@@ -168,7 +168,7 @@ struct ServerManager {
                     ]
             ),
             Question(
-                text: "На сколько ты ненавидишь Заноса (от «Ненавижу» до «Готов убить»)",
+                text: "На сколько ты ненавидишь Таноса (от «Ненавижу» до «Готов убить»)",
                 type: .ranged,
                 answers: [
                     Answer(text: "1", types: SuperStar.allCases),
