@@ -26,6 +26,7 @@ enum SuperStar: String, CaseIterable {
     typealias FullName = (nickName: String, name: String?)
     
     var fullName: FullName {
+        
         switch self {
         case .starLord: return (nickName: "Star-Lord", name: "Peter Jason Quill")
         case .ironMan: return (nickName: "Iron Man", name: "Anthony Edward \"Tony\" Stark")

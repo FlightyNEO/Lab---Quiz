@@ -8,17 +8,20 @@
 
 import UIKit
 
-class SingleQuestionView: QuestionView {
+final class SingleQuestionView: QuestionView {
     
+    // MARK: - Outlets
     @IBOutlet weak var answerOneButton: UIButton!
     @IBOutlet weak var answerTwoButton: UIButton!
     @IBOutlet weak var answerThreeButton: UIButton!
     @IBOutlet weak var answerFourButton: UIButton!
     
+    // MARK: - Private properties
     private var answerButtons: [UIButton?] {
         return [answerOneButton, answerTwoButton, answerThreeButton, answerFourButton]
     }
     
+    // MARK: - Override methods
     override func setQuestion(_ question: Question) {
         super.setQuestion(question)
         

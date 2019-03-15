@@ -10,19 +10,25 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet var emojiLabels: [UILabel]!
     
-    
+    // MARK: - Life cicles
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setEmojiLabels()
+        
+    }
+    
+    // MARK: - Private methods
+    private func setEmojiLabels() {
         let stars = SuperStar.allCases
         stars.enumerated().forEach { (offset, element) in
             
             emojiLabels[offset].text = element.rawValue
             
         }
-        
     }
     
     // MARK: - Actions

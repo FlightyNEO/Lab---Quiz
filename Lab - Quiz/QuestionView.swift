@@ -10,19 +10,22 @@ import UIKit
 
 class QuestionView: UIStackView {
     
+    // MARK: - Outlets
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var replyButton: UIButton!
     
+    // MARK: - Override methods
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
+        // Setting replyButton
         replyButton?.layer.masksToBounds = true
         replyButton?.layer.cornerRadius = replyButton.frame.height / 2
         
-        
     }
     
+    // MARK: - Methods
     func setQuestion(_ question: Question) {
         
         questionLabel.text = question.text

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class RangedQuestionView: QuestionView {
+final class RangedQuestionView: QuestionView {
     
+    // MARK: - Outlets
     @IBOutlet weak var answerSlider: UISlider!
     
 }

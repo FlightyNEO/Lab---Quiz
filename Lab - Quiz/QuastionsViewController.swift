@@ -18,7 +18,7 @@ class QuastionsViewController: UIViewController {
     
     // MARK: - Private properties
     private var questions: [Question] = []
-    private var currentQuestionNumber = 14           // 3 - multiple, 14 - ranged, ather - single
+    private var currentQuestionNumber = 1           // 3 - multiple, 14 - ranged, ather - single
     private var responceType = Question.ResponceType.single {
         didSet { displayQuestionView(by: responceType) }
     }
