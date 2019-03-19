@@ -18,27 +18,35 @@ class QuastionsViewController: UIViewController {
     
     // MARK: - Private properties
     private var questions: [Question] = []
-    private var currentQuestionNumber = 1           // 3 - multiple, 14 - ranged, ather - single
+    private var currentQuestionNumber = 3           // 3 - multiple, 14 - ranged, ather - single
     private var responceType = Question.ResponceType.single {
         didSet { displayQuestionView(by: responceType) }
     }
+    private var currentQuestion: Question {
+        return questions[currentQuestionNumber]
+    }
+    
+    private var answers: [Answer] = []
     
     // MARK: - Life cicles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        singleQuestionView.delegate = self
+        multipleQuestionView.delegate = self
+        rangedQuestionView.delegate = self
         
         // Load question
         loadQuesions {
             updateUI()
         }
         
-        //performSegue(withIdentifier: "Finish", sender: nil)
     }
     
     // MARK: - Private methods
     private func updateUI() {
         
-        let question = questions[currentQuestionNumber]
+        let question = currentQuestion
         
         // set responseType
         responceType = question.type
@@ -76,6 +84,10 @@ class QuastionsViewController: UIViewController {
         
     }
     
+    private func nextQuestion() {
+        print(#function, "Next Question")
+    }
+    
     private func displayQuestionView(by responseType: Question.ResponceType) {
         
         switch responseType {
@@ -94,5 +106,39 @@ class QuastionsViewController: UIViewController {
         }
         
     }
+    
+    private func writeTheAnswer(with text: String) {
+        
+        switch responceType {
+            
+        case .single:
+            
+            guard let answer = currentQuestion.answers.first(where: { $0.text == text }) else { break }
+            answers.append(answer)
+            
+        case .multiple: break
+            
+        case .ranged: break
+            
+        }
+        
+        //print(answers)
+        
+    }
+    
+}
+
+extension QuastionsViewController: QuestionViewDelegate {
+    
+    func didSelectReplyButton(with title: String?) {
+        
+        if let text = title {
+            writeTheAnswer(with: text)
+        }
+        
+        nextQuestion()
+        
+    }
+    
     
 }

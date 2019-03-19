@@ -36,4 +36,10 @@ final class SingleQuestionView: QuestionView {
         
     }
     
+    override func actionReplyButton(_ sender: UIButton) {
+        
+        delegate?.didSelectReplyButton(with: sender.titleLabel?.text)
+        
+    }
+    
 }

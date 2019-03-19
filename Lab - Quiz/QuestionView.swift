@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol QuestionViewDelegate {
+    func didSelectReplyButton(with title: String?)
+}
+
 class QuestionView: UIStackView {
     
     // MARK: - Outlets
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var replyButton: UIButton!
+    
+    var delegate: QuestionViewDelegate?
     
     // MARK: - Override methods
     override func draw(_ rect: CGRect) {
@@ -30,6 +36,11 @@ class QuestionView: UIStackView {
         
         questionLabel.text = question.text
         
+    }
+    
+    // MARK: - Actions
+    @IBAction func actionReplyButton(_ sender: UIButton) {
+        delegate?.didSelectReplyButton(with: "")
     }
     
 }
