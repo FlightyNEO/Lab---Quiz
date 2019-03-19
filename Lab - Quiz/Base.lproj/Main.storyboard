@@ -389,8 +389,10 @@
                                 </subviews>
                                 <connections>
                                     <outlet property="answerSlider" destination="bSr-00-uws" id="Zeb-fu-kp6"/>
+                                    <outlet property="leftLabel" destination="Ltx-bV-Mft" id="v2c-zP-IAF"/>
                                     <outlet property="questionLabel" destination="knL-he-5b3" id="TMh-0r-3Q0"/>
                                     <outlet property="replyButton" destination="Dq8-Ob-XJR" id="ey4-Yh-seg"/>
+                                    <outlet property="rightLabel" destination="IM8-Zw-dF6" id="WjL-tV-k0k"/>
                                 </connections>
                             </stackView>
                         </subviews>

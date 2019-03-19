@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SuperStar: String, CaseIterable {
+enum SuperStar: String, CaseIterable, CustomDebugStringConvertible {
     
     case starLord = "👻"
     case ironMan = "👮‍♂️"
@@ -41,6 +41,9 @@ enum SuperStar: String, CaseIterable {
         
     }
     
+    var debugDescription: String {
+        return self.rawValue
+    }
     
     
 }

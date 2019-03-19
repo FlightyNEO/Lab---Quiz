@@ -8,9 +8,13 @@
 
 import Foundation
 
-struct Answer {
+struct Answer: CustomDebugStringConvertible {
     
     var text: String
     var types: [SuperStar]
+    
+    var debugDescription: String {
+        return "\(text) - \(types)"
+    }
     
 }

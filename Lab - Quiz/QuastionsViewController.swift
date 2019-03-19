@@ -18,7 +18,7 @@ class QuastionsViewController: UIViewController {
     
     // MARK: - Private properties
     private var questions: [Question] = []
-    private var currentQuestionNumber = 3           // 3 - multiple, 14 - ranged, ather - single
+    private var currentQuestionNumber = 14           // 3 - multiple, 14 - ranged, ather - single
     private var responceType = Question.ResponceType.single {
         didSet { displayQuestionView(by: responceType) }
     }
@@ -107,7 +107,7 @@ class QuastionsViewController: UIViewController {
         
     }
     
-    private func writeTheAnswer(with text: String) {
+    private func writeTheAnswer(with text: String?) {
         
         switch responceType {
             
@@ -115,10 +115,18 @@ class QuastionsViewController: UIViewController {
             
             guard let answer = currentQuestion.answers.first(where: { $0.text == text }) else { break }
             answers.append(answer)
+            print(answer)
             
-        case .multiple: break
+        case .multiple:
+            
+            let numberAnswers = multipleQuestionView.fetchNumbersOfChosenSwitches()
+            let answers = currentQuestion.answers.enumerated().compactMap { numberAnswers.contains($0) ? $1 : nil }
+            self.answers.append(contentsOf: answers)
+            print(answers)
             
         case .ranged: break
+            
+            
             
         }
         
@@ -132,9 +140,7 @@ extension QuastionsViewController: QuestionViewDelegate {
     
     func didSelectReplyButton(with title: String?) {
         
-        if let text = title {
-            writeTheAnswer(with: text)
-        }
+        writeTheAnswer(with: title)
         
         nextQuestion()
         

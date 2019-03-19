@@ -26,6 +26,15 @@ final class MultipleQuestionView: QuestionView {
         return [answerOneLabel, answerTwoLabel, answerThreeLabel, answerFourLabel]
     }
     
+    private var answerSwitches: [UISwitch] {
+        return [answerOneSwitch, answerThwSwitch, answerThreeSwitch, answerFourSwitch]
+    }
+    
+    // MARK: - Methods
+    func fetchNumbersOfChosenSwitches() -> [Int] {
+        return answerSwitches.enumerated().compactMap { $1.isOn ? $0 : nil }
+    }
+    
     // MARK: - Override methods
     override func setQuestion(_ question: Question) {
         super.setQuestion(question)

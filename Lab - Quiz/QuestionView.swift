@@ -40,7 +40,7 @@ class QuestionView: UIStackView {
     
     // MARK: - Actions
     @IBAction func actionReplyButton(_ sender: UIButton) {
-        delegate?.didSelectReplyButton(with: "")
+        delegate?.didSelectReplyButton(with: nil)
     }
     
 }
