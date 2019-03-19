@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5827F7B522419E2D0036DAB5 /* Array (Extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = 5827F7B422419E2D0036DAB5 /* Array (Extension).swift */; };
 		5893621A223AE8F800E2D2A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58936219223AE8F800E2D2A0 /* AppDelegate.swift */; };
 		5893621C223AE8F800E2D2A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5893621B223AE8F800E2D2A0 /* MainViewController.swift */; };
 		5893621F223AE8F800E2D2A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5893621D223AE8F800E2D2A0 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5827F7B422419E2D0036DAB5 /* Array (Extension).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array (Extension).swift"; sourceTree = "<group>"; };
 		58936216223AE8F800E2D2A0 /* Lab - Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab - Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58936219223AE8F800E2D2A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5893621B223AE8F800E2D2A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5827F7B322419E0B0036DAB5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5827F7B422419E2D0036DAB5 /* Array (Extension).swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		5893620D223AE8F800E2D2A0 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		58936218223AE8F800E2D2A0 /* Lab - Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				5827F7B322419E0B0036DAB5 /* Helpers */,
 				58C35BCF223AFD870093102F /* Resources */,
 				58C35BDD223B33FA0093102F /* Views */,
 				5893622F223AF32D00E2D2A0 /* Controllers */,
@@ -202,6 +213,7 @@
 				58C35BDA223B33DA0093102F /* MultipleQuestionView.swift in Sources */,
 				5893621C223AE8F800E2D2A0 /* MainViewController.swift in Sources */,
 				58C35BD4223B25440093102F /* SuperHero.swift in Sources */,
+				5827F7B522419E2D0036DAB5 /* Array (Extension).swift in Sources */,
 				58C35BCE223AFC860093102F /* Answer.swift in Sources */,
 				58C35BD2223B09380093102F /* ServerManager.swift in Sources */,
 				58C35BD8223B33CC0093102F /* SingleQuestionView.swift in Sources */,

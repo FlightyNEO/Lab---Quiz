@@ -33,8 +33,8 @@ class ResultViewController: UIViewController {
     private func calculateResult(completed: ((superHero: SuperHero, count: Int)?) -> ()) {
         
         let typesFrequency = response.flatMap { $0.types }  // all types [type]
-        let countsTypes = typesFrequency.reduce(into: [:]) { $0[$1, default: 0] += 1 } // [type : count]
-        let maxType = countsTypes.max { $0.value < $1.value }   // max count type (type : count)
+        let countsTypes = typesFrequency.histogram // [type : count]
+        let maxType = countsTypes.max { $0.value < $1.value }   // max count type (type, count)
         
         let result: (superHero: SuperHero, count: Int) = (superHero: maxType!.key, count: maxType!.value)
         completed(result)

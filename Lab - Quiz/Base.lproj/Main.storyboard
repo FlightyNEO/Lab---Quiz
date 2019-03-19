@@ -399,8 +399,8 @@
                         <viewLayoutGuide key="safeArea" id="lPp-x5-Sc9"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="aWx-kz-79p"/>
                                 <exclude reference="btx-Tu-9H8"/>
+                                <exclude reference="aWx-kz-79p"/>
                             </mask>
                         </variation>
                     </view>
@@ -463,7 +463,7 @@
                     <navigationItem key="navigationItem" title="Result" id="H3V-UP-Dwf">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="HEa-Ri-wAT">
                             <connections>
-                                <segue destination="FUU-Vi-Hjx" kind="unwind" unwindAction="unwindFor:" id="SXV-5t-jOe"/>
+                                <segue destination="FUU-Vi-Hjx" kind="unwind" identifier="unwindToMainScreen" unwindAction="unwindFor:" id="SXV-5t-jOe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
