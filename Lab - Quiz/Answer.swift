@@ -11,7 +11,7 @@ import Foundation
 struct Answer: CustomDebugStringConvertible {
     
     var text: String
-    var types: [SuperStar]
+    var types: [SuperHero]
     
     var debugDescription: String {
         return "\(text) - \(types)"

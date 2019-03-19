@@ -1,5 +1,5 @@
 //
-//  QuastionsViewController.swift
+//  QuestionsViewController.swift
 //  Lab - Quiz
 //
 //  Created by Arkadiy Grigoryanc on 14/03/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuastionsViewController: UIViewController {
+class QuestionsViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var progressView: UIProgressView!
@@ -25,13 +25,15 @@ class QuastionsViewController: UIViewController {
     private var currentQuestion: Question {
         return questions[currentQuestionNumber]
     }
+    private var answersChosen: [Answer] = []
     
-    private var answers: [Answer] = []
+    private let showResultIdentifier = "ShowResult"
     
     // MARK: - Life cicles
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set delegates
         singleQuestionView.delegate = self
         multipleQuestionView.delegate = self
         rangedQuestionView.delegate = self
@@ -55,7 +57,7 @@ class QuastionsViewController: UIViewController {
         setQuestion(question)
         
         // Set title
-        title = "Question \(String(currentQuestionNumber + 1))/\(String(questions.count))"
+        title = "Вопрос №\(String(currentQuestionNumber + 1))/\(String(questions.count))"
         
         // update value progressView
         let progress = 1.0 / Float(questions.count + 1) * Float(currentQuestionNumber + 1)
@@ -85,7 +87,19 @@ class QuastionsViewController: UIViewController {
     }
     
     private func nextQuestion() {
-        print(#function, "Next Question")
+        
+        guard currentQuestionNumber < questions.count - 1 else {
+            
+            // Finished
+            performSegue(withIdentifier: showResultIdentifier, sender: nil)
+            return
+            
+        }
+        
+        // Next question
+        currentQuestionNumber += 1
+        updateUI()
+        
     }
     
     private func displayQuestionView(by responseType: Question.ResponceType) {
@@ -114,14 +128,14 @@ class QuastionsViewController: UIViewController {
         case .single:
             
             guard let answer = currentQuestion.answers.first(where: { $0.text == text }) else { break }
-            answers.append(answer)
+            answersChosen.append(answer)
             print(answer)
             
         case .multiple:
             
             let numberAnswers = multipleQuestionView.fetchNumbersOfChosenSwitches()
             let answers = currentQuestion.answers.enumerated().compactMap { numberAnswers.contains($0) ? $1 : nil }
-            self.answers.append(contentsOf: answers)
+            self.answersChosen.append(contentsOf: answers)
             print(answers)
             
         case .ranged:
@@ -129,7 +143,7 @@ class QuastionsViewController: UIViewController {
             let value = rangedQuestionView.fetchSliderValuew()
             let index = Int(round(value * Float(currentQuestion.answers.count - 1)))
             let answer = currentQuestion.answers[index]
-            answers.append(answer)
+            answersChosen.append(answer)
             print(answer)
             
         }
@@ -138,7 +152,8 @@ class QuastionsViewController: UIViewController {
     
 }
 
-extension QuastionsViewController: QuestionViewDelegate {
+// MARK: - QuestionViewDelegate
+extension QuestionsViewController: QuestionViewDelegate {
     
     func didSelectReplyButton(with title: String?) {
         
@@ -148,5 +163,19 @@ extension QuastionsViewController: QuestionViewDelegate {
         
     }
     
+}
+
+// MARK: - Navigation
+extension QuestionsViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard segue.identifier == showResultIdentifier else { return }
+        
+        let resultViewController = segue.destination as! ResultViewController
+        
+        resultViewController.response = answersChosen
+        
+    }
     
 }

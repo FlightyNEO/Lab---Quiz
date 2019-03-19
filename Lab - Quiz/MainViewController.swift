@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     
     // MARK: - Private methods
     private func setEmojiLabels() {
-        let stars = SuperStar.allCases
+        let stars = SuperHero.allCases
         stars.enumerated().forEach { (offset, element) in
             
             emojiLabels[offset].text = element.rawValue

@@ -12,12 +12,12 @@
 		5893621F223AE8F800E2D2A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5893621D223AE8F800E2D2A0 /* Main.storyboard */; };
 		58936221223AE8FA00E2D2A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58936220223AE8FA00E2D2A0 /* Assets.xcassets */; };
 		58936224223AE8FA00E2D2A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58936222223AE8FA00E2D2A0 /* LaunchScreen.storyboard */; };
-		5893622C223AF31A00E2D2A0 /* QuastionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5893622B223AF31A00E2D2A0 /* QuastionsViewController.swift */; };
+		5893622C223AF31A00E2D2A0 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5893622B223AF31A00E2D2A0 /* QuestionsViewController.swift */; };
 		5893622E223AF32800E2D2A0 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5893622D223AF32800E2D2A0 /* ResultViewController.swift */; };
 		58C35BCC223AFC780093102F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C35BCB223AFC780093102F /* Question.swift */; };
 		58C35BCE223AFC860093102F /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C35BCD223AFC860093102F /* Answer.swift */; };
 		58C35BD2223B09380093102F /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C35BD1223B09380093102F /* ServerManager.swift */; };
-		58C35BD4223B25440093102F /* SuperStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C35BD3223B25440093102F /* SuperStar.swift */; };
+		58C35BD4223B25440093102F /* SuperHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C35BD3223B25440093102F /* SuperHero.swift */; };
 		58C35BD6223B32DF0093102F /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C35BD5223B32DF0093102F /* QuestionView.swift */; };
 		58C35BD8223B33CC0093102F /* SingleQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C35BD7223B33CB0093102F /* SingleQuestionView.swift */; };
 		58C35BDA223B33DA0093102F /* MultipleQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C35BD9223B33DA0093102F /* MultipleQuestionView.swift */; };
@@ -32,12 +32,12 @@
 		58936220223AE8FA00E2D2A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58936223223AE8FA00E2D2A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58936225223AE8FA00E2D2A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5893622B223AF31A00E2D2A0 /* QuastionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuastionsViewController.swift; sourceTree = "<group>"; };
+		5893622B223AF31A00E2D2A0 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		5893622D223AF32800E2D2A0 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		58C35BCB223AFC780093102F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		58C35BCD223AFC860093102F /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		58C35BD1223B09380093102F /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
-		58C35BD3223B25440093102F /* SuperStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperStar.swift; sourceTree = "<group>"; };
+		58C35BD3223B25440093102F /* SuperHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHero.swift; sourceTree = "<group>"; };
 		58C35BD5223B32DF0093102F /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		58C35BD7223B33CB0093102F /* SingleQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleQuestionView.swift; sourceTree = "<group>"; };
 		58C35BD9223B33DA0093102F /* MultipleQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleQuestionView.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5893621B223AE8F800E2D2A0 /* MainViewController.swift */,
-				5893622B223AF31A00E2D2A0 /* QuastionsViewController.swift */,
+				5893622B223AF31A00E2D2A0 /* QuestionsViewController.swift */,
 				5893622D223AF32800E2D2A0 /* ResultViewController.swift */,
 			);
 			name = Controllers;
@@ -109,7 +109,7 @@
 			children = (
 				58C35BCB223AFC780093102F /* Question.swift */,
 				58C35BCD223AFC860093102F /* Answer.swift */,
-				58C35BD3223B25440093102F /* SuperStar.swift */,
+				58C35BD3223B25440093102F /* SuperHero.swift */,
 				58C35BD1223B09380093102F /* ServerManager.swift */,
 			);
 			name = Models;
@@ -197,11 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5893622C223AF31A00E2D2A0 /* QuastionsViewController.swift in Sources */,
+				5893622C223AF31A00E2D2A0 /* QuestionsViewController.swift in Sources */,
 				58C35BCC223AFC780093102F /* Question.swift in Sources */,
 				58C35BDA223B33DA0093102F /* MultipleQuestionView.swift in Sources */,
 				5893621C223AE8F800E2D2A0 /* MainViewController.swift in Sources */,
-				58C35BD4223B25440093102F /* SuperStar.swift in Sources */,
+				58C35BD4223B25440093102F /* SuperHero.swift in Sources */,
 				58C35BCE223AFC860093102F /* Answer.swift in Sources */,
 				58C35BD2223B09380093102F /* ServerManager.swift in Sources */,
 				58C35BD8223B33CC0093102F /* SingleQuestionView.swift in Sources */,

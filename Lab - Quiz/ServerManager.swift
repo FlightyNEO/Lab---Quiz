@@ -171,10 +171,10 @@ struct ServerManager {
                 text: "На сколько ты ненавидишь Таноса (от «Ненавижу» до «Готов убить»)",
                 type: .ranged,
                 answers: [
-                    Answer(text: "Ненавижу", types: SuperStar.allCases),
-                    //Answer(text: "", types: SuperStar.allCases),
-                    //Answer(text: "3", types: SuperStar.allCases),
-                    Answer(text: "Убью", types: SuperStar.allCases)
+                    Answer(text: "Ненавижу", types: SuperHero.allCases),
+                    //Answer(text: "", types: SuperHero.allCases),
+                    //Answer(text: "3", types: SuperHero.allCases),
+                    Answer(text: "Убью", types: SuperHero.allCases)
                     ]
             )
         ]

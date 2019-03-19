@@ -25,6 +25,8 @@ final class RangedQuestionView: QuestionView {
     override func setQuestion(_ question: Question) {
         leftLabel.text = question.answers.first?.text
         rightLabel.text = question.answers.last?.text
+        
+        questionLabel.text = question.text
     }
     
 }
