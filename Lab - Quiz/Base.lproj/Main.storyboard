@@ -350,23 +350,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="bSr-00-uws">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bSr-00-uws">
                                         <rect key="frame" x="-2" y="36.5" width="292" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="GPc-ID-he1"/>
                                         </constraints>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="216" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-P8-YYH">
-                                        <rect key="frame" x="25.5" y="82.5" width="237.5" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-P8-YYH">
+                                        <rect key="frame" x="0.0" y="82.5" width="288" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltx-bV-Mft">
-                                                <rect key="frame" x="0.0" y="0.0" width="10.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM8-Zw-dF6">
-                                                <rect key="frame" x="226.5" y="0.0" width="11" height="20.5"/>
+                                                <rect key="frame" x="148" y="0.0" width="140" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -387,6 +387,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="xAt-P8-YYH" firstAttribute="leading" secondItem="bAu-MC-Sj3" secondAttribute="leading" id="LYq-45-h3Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="xAt-P8-YYH" secondAttribute="trailing" id="hwj-YP-hbw"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="answerSlider" destination="bSr-00-uws" id="Zeb-fu-kp6"/>
                                     <outlet property="leftLabel" destination="Ltx-bV-Mft" id="v2c-zP-IAF"/>

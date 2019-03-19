@@ -18,7 +18,7 @@ class QuastionsViewController: UIViewController {
     
     // MARK: - Private properties
     private var questions: [Question] = []
-    private var currentQuestionNumber = 14           // 3 - multiple, 14 - ranged, ather - single
+    private var currentQuestionNumber = 0           // 3 - multiple, 14 - ranged, ather - single
     private var responceType = Question.ResponceType.single {
         didSet { displayQuestionView(by: responceType) }
     }
@@ -124,13 +124,15 @@ class QuastionsViewController: UIViewController {
             self.answers.append(contentsOf: answers)
             print(answers)
             
-        case .ranged: break
+        case .ranged:
             
-            
+            let value = rangedQuestionView.fetchSliderValuew()
+            let index = Int(round(value * Float(currentQuestion.answers.count - 1)))
+            let answer = currentQuestion.answers[index]
+            answers.append(answer)
+            print(answer)
             
         }
-        
-        //print(answers)
         
     }
     
