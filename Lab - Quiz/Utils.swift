@@ -9,7 +9,7 @@ import Foundation
 
 extension Double {
     func radians() -> Double {
-        return self * Double.pi / 180.0
+        return self * .pi / 180.0
     }
 }
 //

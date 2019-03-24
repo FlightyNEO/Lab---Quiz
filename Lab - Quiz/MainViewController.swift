@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
         
     }
     
-    private func startAnimation(complition: @escaping () -> ()) {
+    private func startAnimation(completion: @escaping () -> ()) {
         
         animationView.play()
         
@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
             
         }) { (_) in
             
-            complition()
+            completion()
             
         }
         
